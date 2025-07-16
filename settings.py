@@ -1,11 +1,11 @@
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(_file_).resolve().parent.parent
 
-SECRET_KEY = 'ecommerce'  
+SECRET_KEY = 'django-insecure-REPLACE_ME'  
 
-DEBUG = True 
+DEBUG = True  
 
 ALLOWED_HOSTS = ['*']  
 
@@ -68,7 +68,6 @@ DATABASES = {
 }
 
 AUTH_USER_MODEL = 'accounts.User'
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -90,8 +89,8 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']  
-STATIC_ROOT = BASE_DIR / 'staticfiles'   
+STATICFILES_DIRS = [BASE_DIR / 'static']  # place for dev
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # collectstatic for prod
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
